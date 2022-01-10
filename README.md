@@ -1,3 +1,4 @@
 # Sole Mates
 
-website link :
+under development
+website link : https://solemates.netlify.app/
