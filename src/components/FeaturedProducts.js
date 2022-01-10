@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-
+import API_KEY from "./apikey";
 const FeaturedProducts = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    const apiKey = process.env.REACT_APP_API_KEY;
     fetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=10&gender=men&page=2&releaseYear=2020", {
       method: "GET",
       headers: {
         "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
-        "x-rapidapi-key": apiKey,
+        "x-rapidapi-key": API_KEY,
       },
     })
       .then((response) => {
