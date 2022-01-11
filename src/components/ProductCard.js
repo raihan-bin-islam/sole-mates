@@ -1,14 +1,17 @@
 import React from "react";
 
-const ProductCard = ({ id, imageUrl, name, gender, retailPrice }) => {
+const ProductCard = ({ data }) => {
+  const { id, imageUrl, name, gender, retailPrice } = data;
   return (
-    <div className="product-card" key={id}>
-      <img src={imageUrl} alt="" />
-      <p className="name">{name}</p>
-      <p className="gender">{gender.toUpperCase()}</p>
-      <p className="price">${retailPrice}</p>
-      <button>Add to cart</button>
-    </div>
+    imageUrl && (
+      <div className="product-card" key={id}>
+        <img src={imageUrl} alt="" />
+        <p className="name">{name}</p>
+        <p className="gender">{gender.toUpperCase()}</p>
+        <p className="price">${retailPrice}</p>
+        <button>Add to cart</button>
+      </div>
+    )
   );
 };
 
