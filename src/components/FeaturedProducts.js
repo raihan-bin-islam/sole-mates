@@ -29,8 +29,8 @@ const FeaturedProducts = () => {
     <div className="featured-products">
       <h1>Featured Products</h1>
       <div className="featured-products-container">
-        {product ? (
-          product.map((data, index) => index < 3 && <ProductCard data={data} />)
+        {product.length > 0 ? (
+          product.map(({ id, ...data }, index) => index < 3 && <ProductCard data={data} key={id} />)
         ) : (
           <h3>No Products Found</h3>
         )}
