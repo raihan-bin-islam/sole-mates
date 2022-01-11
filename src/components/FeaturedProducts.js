@@ -29,7 +29,11 @@ const FeaturedProducts = () => {
     <div className="featured-products">
       <h1>Featured Products</h1>
       <div className="featured-products-container">
-        {product && product.map((data, index) => index < 3 && <ProductCard data={data} />)}
+        {product ? (
+          product.map((data, index) => index < 3 && <ProductCard data={data} />)
+        ) : (
+          <h3>No Products Found</h3>
+        )}
       </div>
     </div>
   );
