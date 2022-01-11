@@ -5,7 +5,7 @@ const FeaturedProducts = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
     fetch(
-      "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=10&gender=men&page=2&releaseYear=2020",
+      "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=3&gender=men&page=2&releaseYear=2020",
       {
         method: "GET",
         headers: {
@@ -29,7 +29,7 @@ const FeaturedProducts = () => {
     <div className="featured-products">
       <h1>Featured Products</h1>
       <div className="featured-products-container">
-        {product.length > 0 ? (
+        {product ? (
           product.map(({ id, ...data }, index) => index < 3 && <ProductCard data={data} key={id} />)
         ) : (
           <h3>No Products Found</h3>
