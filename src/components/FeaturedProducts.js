@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import API_KEY from "./apikey";
+import ProductCard from "./ProductCard";
 const FeaturedProducts = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=10&gender=men&page=2&releaseYear=2020", {
-      method: "GET",
-      headers: {
-        "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
-        "x-rapidapi-key": API_KEY,
-      },
-    })
+    fetch(
+      "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=10&gender=men&page=2&releaseYear=2020",
+      {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
+          "x-rapidapi-key": API_KEY,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })
@@ -30,13 +34,13 @@ const FeaturedProducts = () => {
             ({ id, gender, name, media: { imageUrl }, retailPrice }, index) =>
               index < 3 &&
               imageUrl && (
-                <div className="featured-product-card" key={id}>
-                  <img src={imageUrl} alt="" />
-                  <p className="name">{name}</p>
-                  <p className="gender">{gender.toUpperCase()}</p>
-                  <p className="price">${retailPrice}</p>
-                  <button>Add to cart</button>
-                </div>
+                <ProductCard
+                  id={id}
+                  gender={gender}
+                  name={name}
+                  imageUrl={imageUrl}
+                  retailPrice={retailPrice}
+                />
               )
           )}
       </div>
