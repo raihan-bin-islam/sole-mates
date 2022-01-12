@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 
 const FeaturedProducts = () => {
   const [params, setParams] = useState({ limit: 10, gender: "men", page: 1, releaseYear: 2020 });
-  const [product] = useFetch(urlForAllSneakers, params);
+  const product = useFetch(urlForAllSneakers, params);
 
   return (
     <>

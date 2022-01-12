@@ -6,8 +6,9 @@ const useFetch = (url, params) => {
 
   useEffect(() => {
     const fetchData = async () => {
+      let fetchUrl = url;
       if (params) {
-        url = processUrl(url, params);
+        fetchUrl = processUrl(url, params);
       }
       const options = {
         method: "GET",
@@ -16,14 +17,14 @@ const useFetch = (url, params) => {
           "x-rapidapi-key": API_KEY,
         },
       };
-      const response = await fetch(url, options);
+      const response = await fetch(fetchUrl, options);
       const jsonData = await response.json();
       setData(jsonData.results);
     };
     fetchData();
-  }, [params]);
+  }, [url, params]);
 
-  return [data];
+  return data;
 };
 
 export default useFetch;

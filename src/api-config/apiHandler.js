@@ -13,6 +13,7 @@ const processUrl = (url, params) => {
     //last parameter value. no need to add "&"
     if (index === numOfParameters - 1) urlWithParam = `${urlWithParam}${key}=${value}`;
     else urlWithParam = `${urlWithParam}${key}=${value}&`;
+    return null;
   });
   return urlWithParam;
 };
