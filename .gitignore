@@ -8,7 +8,9 @@
 
 #api keys
 apikey.js
-.env
+
+#test code
+src/test
 # testing
 /coverage
 
