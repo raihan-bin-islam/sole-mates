@@ -166,7 +166,6 @@ ul {
   height: 400px;
   margin: 2rem;
   background-color: white;
-  border: 1px solid transparent;
   cursor: pointer;
   overflow: hidden;
   border: 1px solid rgba(168, 168, 168, 0.664);
@@ -247,8 +246,11 @@ ul {
 .product-card .name,
 .gender,
 .price {
+  position: relative;
+  bottom: 0;
   margin-right: auto;
   margin-left: 1rem;
+  transition: all 0.15s ease;
 }
 .product-card .name {
   margin-top: auto;
@@ -258,18 +260,18 @@ ul {
   margin-bottom: auto;
 }
 .product-card .price {
-  position: relative;
   background-color: black;
   color: white;
   padding: 1px 0.5rem;
   bottom: 1rem;
   border-radius: 4px;
-  transition: all 0.15s ease;
 }
-
+.product-card:hover > .name,
+.product-card:hover > .gender {
+  bottom: 0.25rem;
+}
 .product-card:hover > .price {
   bottom: 1.5rem;
-  margin-bottom: 0.5rem;
 }
 .categories {
   display: flex;
@@ -294,12 +296,19 @@ ul {
   position: relative;
   cursor: pointer;
 }
-.category-card img {
+.category-card a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  text-decoration: none;
+}
+.category-card a img {
   object-fit: cover;
   width: 100%;
   height: 90vh;
 }
-.category-card h2 {
+.category-card a h2 {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   display: none;
@@ -310,7 +319,7 @@ ul {
   width: 100%;
   height: 100%;
 }
-.category-card:hover > h2 {
+.category-card a:hover > h2 {
   display: flex;
   align-items: center;
   justify-content: center;

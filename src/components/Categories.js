@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import categoryList from "../utils/categoryList";
 const Categories = () => {
   return (
@@ -8,8 +9,10 @@ const Categories = () => {
         {categoryList.map(({ id, category, thumbnail }) => {
           return (
             <div className="category-card" key={id}>
-              <h2>{category.toUpperCase()}</h2>
-              <img src={thumbnail} alt="" />
+              <Link to={category}>
+                <h2>{category.toUpperCase()}</h2>
+                <img src={thumbnail} alt="" />
+              </Link>
             </div>
           );
         })}
