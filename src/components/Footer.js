@@ -12,16 +12,16 @@ const Footer = () => {
             pariatur quis iure necessitatibus tempore nostrum soluta!
           </p>
           <div className="social-icons">
-            <a href="#">
+            <a href="https://www.facebook.com/raihanulislams/">
               <BsFacebook className="icons" />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/raihanul_islam">
               <BsInstagram className="icons" />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/raihan-islam/">
               <BsLinkedin className="icons" />
             </a>
-            <a href="#">
+            <a href="https://github.com/raihan-bin-islam/">
               <BsGithub className="icons" />
             </a>
           </div>
