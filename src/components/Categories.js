@@ -2,7 +2,7 @@ import React from "react";
 import categoryList from "../utils/categoryList";
 const Categories = () => {
   return (
-    <div className="category">
+    <div className="categories">
       <h1>Shop Now</h1>
       <div className="category-list"></div>
       {categoryList.map(({ id, category, thumbnail }) => {
