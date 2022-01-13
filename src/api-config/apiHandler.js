@@ -5,7 +5,7 @@ export const urlForOneSneaker = "https://v1-sneakers.p.rapidapi.com/v1/sneakers/
 // takes no parameter. returns a list of brands.
 export const urlForBrands = "https://v1-sneakers.p.rapidapi.com/v1/brands";
 
-const processUrl = (url, params) => {
+const concatUrlWithParameters = (url, params) => {
   let urlWithParam = url;
   const numOfParameters = Object.keys(params).length;
   Object.keys(params).some((key, index) => {
@@ -18,4 +18,4 @@ const processUrl = (url, params) => {
   return urlWithParam;
 };
 
-export default processUrl;
+export default concatUrlWithParameters;

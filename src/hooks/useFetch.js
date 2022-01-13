@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import processUrl from "../api-config/apiHandler";
+import concatUrlWithParameters from "../api-config/apiHandler";
 import API_KEY from "../api-config/apikey";
 const useFetch = (url, params) => {
   const [data, setData] = useState([]);
@@ -8,7 +8,7 @@ const useFetch = (url, params) => {
     const fetchData = async () => {
       let fetchUrl = url;
       if (params) {
-        fetchUrl = processUrl(url, params);
+        fetchUrl = concatUrlWithParameters(url, params);
       }
       const options = {
         method: "GET",
