@@ -358,6 +358,9 @@ ul {
   font-weight: 100;
   color: white;
 }
+.footer-links a:hover {
+  color: crimson;
+}
 .website-details {
   width: 50%;
   padding: 1rem;

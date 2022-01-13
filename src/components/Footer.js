@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFacebook, BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
+import NavigationLinks from "./NavigationLinks";
 
 const Footer = () => {
   return (
@@ -28,14 +29,7 @@ const Footer = () => {
         </div>
         <div className="footer-links">
           <h3>Useful Links</h3>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-              <a href="/">Men</a>
-              <a href="/">Women</a>
-              <a href="/">Kids</a>
-            </li>
-          </ul>
+          <NavigationLinks />
         </div>
       </div>
     </div>
