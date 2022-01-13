@@ -12,10 +12,18 @@ const Footer = () => {
             pariatur quis iure necessitatibus tempore nostrum soluta!
           </p>
           <div className="social-icons">
-            <BsFacebook className="icons" />
-            <BsInstagram className="icons" />
-            <BsLinkedin className="icons" />
-            <BsGithub className="icons" />
+            <a href="#">
+              <BsFacebook className="icons" />
+            </a>
+            <a href="#">
+              <BsInstagram className="icons" />
+            </a>
+            <a href="#">
+              <BsLinkedin className="icons" />
+            </a>
+            <a href="#">
+              <BsGithub className="icons" />
+            </a>
           </div>
         </div>
         <div className="footer-links">
