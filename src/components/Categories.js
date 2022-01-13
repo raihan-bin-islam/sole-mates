@@ -8,7 +8,7 @@ const Categories = () => {
         {categoryList.map(({ id, category, thumbnail }) => {
           return (
             <div className="category-card" key={id}>
-              <h2>{category}</h2>
+              <h2>{category.toUpperCase()}</h2>
               <img src={thumbnail} alt="" />
             </div>
           );
