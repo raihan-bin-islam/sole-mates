@@ -38,7 +38,7 @@ code {
 .navbar ul,
 li,
 a {
-  font-family: "Vollkorn", sans-serif;
+  font-family: "Quantico", sans-serif;
   font-weight: 300;
   display: flex;
   justify-content: flex-start;
@@ -351,7 +351,7 @@ ul {
   padding: 1rem;
 }
 .footer-links h3 {
-  font-family: "Vollkorn", sans-serif;
+  font-family: "Quantico", sans-serif;
   font-weight: 100;
   color: rgb(177, 176, 176);
   padding: var(--footer-padding);
@@ -367,7 +367,7 @@ ul {
   padding: var(--footer-padding);
 }
 .footer-links a {
-  font-family: "Vollkorn", sans-serif;
+  font-family: "Quantico", sans-serif;
   font-weight: 100;
   color: white;
 }
@@ -406,4 +406,15 @@ ul {
 }
 .social-icons a:hover > * {
   color: white;
+}
+.copyright-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(19, 19, 19);
+  height: 40px;
+}
+.copyright-section p {
+  color: white;
+  font-family: "Vollkorn", sans-serif;
 }
