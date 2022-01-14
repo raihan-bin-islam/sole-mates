@@ -17,11 +17,23 @@ const useFetch = (url, params) => {
           "x-rapidapi-key": API_KEY,
         },
       };
-      const response = await fetch(fetchUrl, options);
-      const jsonData = await response.json();
-      setData(jsonData.results);
+      await fetch(fetchUrl, options)
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data.results);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     };
-    fetchData();
+    const timer = setTimeout(() => {
+      fetchData();
+    }, 1500);
+    return () => {
+      //timer needs to be cleared otherwise it will try to fetch data
+      //multiple times after the timeout based on the given dependency changes
+      clearTimeout(timer);
+    };
   }, [url, params]);
 
   return data;

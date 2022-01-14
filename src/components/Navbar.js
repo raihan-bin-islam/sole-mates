@@ -1,9 +1,9 @@
 import React from "react";
 import NavigationLinks from "./NavigationLinks";
-const Navbar = () => {
+const Navbar = ({ bg, position = "absolute" }) => {
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar" style={{ background: bg, position: position }}>
         <NavigationLinks />
         <h3 className="logo">Sole Mates</h3>
       </nav>

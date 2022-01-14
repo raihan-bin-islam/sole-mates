@@ -2,14 +2,10 @@ import React from "react";
 import Products from "./Products";
 
 const FeaturedProducts = () => {
+  const heading = "Featured Products";
   return (
     <>
-      <div className="featured-products">
-        <h1>Featured Products</h1>
-        <div className="featured-products-container">
-          <Products releaseYear={2020} numberOfProducts={3} />
-        </div>
-      </div>
+      <Products heading={heading} releaseYear={2020} numberOfProducts={3} />
     </>
   );
 };
