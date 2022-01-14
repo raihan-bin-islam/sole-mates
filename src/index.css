@@ -149,12 +149,14 @@ ul {
   align-items: center;
   flex-direction: column;
   width: 100%;
+
   padding: 2rem 0rem;
 }
 
 .products-container {
   display: grid;
   grid-template-columns: var(--grid-column);
+  min-height: 100vh;
 }
 .product-card {
   position: relative;

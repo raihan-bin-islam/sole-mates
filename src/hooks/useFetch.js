@@ -17,17 +17,12 @@ const useFetch = (url, params) => {
           "x-rapidapi-key": API_KEY,
         },
       };
-      await fetch(fetchUrl, options)
-        .then((response) => response.json())
-        .then((data) => {
-          setData(data.results);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      const response = await fetch(fetchUrl, options);
+      const jsonData = await response.json();
+      setData(jsonData.results);
     };
     const timer = setTimeout(() => {
-      fetchData();
+      fetchData(); // timer added to handle the api call limit/sec
     }, 1500);
     return () => {
       //timer needs to be cleared otherwise it will try to fetch data

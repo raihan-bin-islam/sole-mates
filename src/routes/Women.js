@@ -1,10 +1,15 @@
 import React from "react";
-
+import Navbar from "../components/Navbar";
+import Products from "../components/Products";
+import Footer from "../components/Footer";
 const Women = () => {
+  const heading = "Women's Collection";
   return (
-    <div>
-      <h1>Women</h1>
-    </div>
+    <>
+      <Navbar bg="crimson" position="relative" />
+      <Products heading={heading} gender="women" />
+      <Footer />
+    </>
   );
 };
 

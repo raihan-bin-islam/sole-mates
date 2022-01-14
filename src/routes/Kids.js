@@ -1,10 +1,15 @@
 import React from "react";
-
+import Navbar from "../components/Navbar";
+import Products from "../components/Products";
+import Footer from "../components/Footer";
 const Kids = () => {
+  const heading = "Kid's Collection";
   return (
-    <div>
-      <h1>Kids</h1>
-    </div>
+    <>
+      <Navbar bg="crimson" position="relative" />
+      <Products heading={heading} gender="preschool" />
+      <Footer />
+    </>
   );
 };
 

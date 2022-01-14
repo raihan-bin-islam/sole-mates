@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { urlForAllSneakers } from "../api-config/apiHandler";
 import useFetch from "../hooks/useFetch";
 import ProductCard from "./ProductCard";
