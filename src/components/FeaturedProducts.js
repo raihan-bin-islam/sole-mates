@@ -5,7 +5,7 @@ const FeaturedProducts = () => {
   const heading = "Featured Products";
   return (
     <>
-      <Products heading={heading} releaseYear={2020} numberOfProducts={3} />
+      <Products heading={heading} year={2020} numberOfProducts={3} />
     </>
   );
 };

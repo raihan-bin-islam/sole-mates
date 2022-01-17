@@ -12,7 +12,7 @@ const concatUrlWithParameters = (url, params) => {
     const value = params[key]; // getting the parameter value
     //last parameter value. no need to add "&"
     if (index === numOfParameters - 1 && value) urlWithParam = `${urlWithParam}${key}=${value}`;
-    else if (value) urlWithParam = `${urlWithParam}${key}=${value}&`;
+    else if (value && index < numOfParameters) urlWithParam = `${urlWithParam}${key}=${value}&`;
     return null;
   });
   return urlWithParam;
