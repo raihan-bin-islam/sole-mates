@@ -2,16 +2,16 @@ import React from "react";
 
 const ProductCard = ({ data }) => {
   const {
-    media: { imageUrl },
+    media: { thumbUrl },
     title,
     gender,
     retailPrice,
   } = data; // grab basic details from the product data
   return (
     <>
-      {imageUrl && (
+      {thumbUrl && (
         <div className="product-card">
-          <img src={imageUrl} alt="" />
+          <img src={thumbUrl} alt="" />
           <p className="name">{title}</p>
           <p className="gender">{gender.toUpperCase()}</p>
           <p className="price">${retailPrice}</p>
