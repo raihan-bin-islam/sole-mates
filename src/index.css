@@ -85,15 +85,13 @@ ul {
 }
 
 .hero-container {
-  padding: 0rem 2rem;
-  padding-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   background: radial-gradient(circle, rgb(251, 20, 89) -50%, rgba(193, 21, 21, 1) 100%);
   width: 100%;
-  height: calc(100vh - 4rem);
+  height: 100vh;
   transition: all 1s ease;
   overflow: hidden;
   animation: heroMoveDown 1.5s ease;
