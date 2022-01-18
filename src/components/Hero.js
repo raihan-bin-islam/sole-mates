@@ -1,7 +1,7 @@
 import React from "react";
 import banner from "../assets/banner-image/banner.png";
 import { CgArrowLongDown } from "react-icons/cg";
-
+import { Link } from "react-scroll";
 const Hero = () => {
   return (
     <div className="hero-container">
@@ -9,9 +9,10 @@ const Hero = () => {
         The journey begins with the perfect pair. <br /> Buy yours
       </h1>
       <img src={banner} alt="" />
-      <button className="arrow-down">
+
+      <Link className="arrow-down" to="category" smooth={true} duration={800} spy={true}>
         <CgArrowLongDown />
-      </button>
+      </Link>
     </div>
   );
 };
