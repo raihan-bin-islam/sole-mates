@@ -7,7 +7,7 @@ const Kids = () => {
   return (
     <>
       <Navbar bg="crimson" position="relative" />
-      <Products heading={heading} category="preschool" />
+      {/* <Products heading={heading} category="preschool" /> */}
       <Footer />
     </>
   );
