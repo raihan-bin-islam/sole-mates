@@ -24,7 +24,7 @@ const Products = (props) => {
     page: page,
     releaseYear: releaseYear,
   });
-  const [products] = useFetch(urlForAllSneakers, params);
+  const products = useFetch(urlForAllSneakers, params);
 
   useEffect(() => {
     setParams({ limit: limit, gender: gender, page: page, releaseYear: releaseYear });
@@ -35,16 +35,10 @@ const Products = (props) => {
       <h1>{heading}</h1>
       <div className="products-container">
         {products
-          .filter((product, productCount = 0) => {
-            if (product.media.thumbUrl && productCount <= numberOfProducts) {
-              productCount++;
-              return product;
-            }
-            return null;
-          })
-          .map((product) => {
-            return <ProductCard data={product} key={product.id} />;
-          })}
+          .filter((product) => product.media.thumbUrl && product)
+          .map((product, index) =>
+            index < numberOfProducts ? <ProductCard data={product} key={product.id} /> : null
+          )}
       </div>
     </div>
   );

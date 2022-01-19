@@ -55,7 +55,7 @@ const useFetch = (url, params = null, brandInfo = true) => {
     };
   }, [url, params]);
 
-  return [data];
+  return data;
 };
 
 export default useFetch;

@@ -9,15 +9,13 @@ const ProductCard = ({ data }) => {
   } = data; // grab basic details from the product data
   return (
     <>
-      {thumbUrl && (
-        <div className="product-card">
-          <img src={thumbUrl} alt="" />
-          <p className="name">{title}</p>
-          <p className="gender">{gender.toUpperCase()}</p>
-          <p className="price">${retailPrice}</p>
-          <button>Add to cart</button>
-        </div>
-      )}
+      <div className="product-card">
+        <img src={thumbUrl} alt="" />
+        <p className="name">{title}</p>
+        <p className="gender">{gender.toUpperCase()}</p>
+        <p className="price">${retailPrice}</p>
+        <button>Add to cart</button>
+      </div>
     </>
   );
 };
