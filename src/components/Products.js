@@ -36,8 +36,8 @@ const Products = (props) => {
       <div className="products-container">
         {products
           .filter((product, productCount = 0) => {
-            productCount++;
             if (product.media.thumbUrl && productCount <= numberOfProducts) {
+              productCount++;
               return product;
             }
             return null;
