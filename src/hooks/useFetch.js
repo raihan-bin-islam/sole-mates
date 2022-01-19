@@ -1,6 +1,6 @@
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import concatUrlWithParameters from "../api-config/apiHandler";
-import { urlForBrands } from "../api-config/apiHandler";
+
 import API_KEY from "../api-config/apikey";
 const useFetch = (url, params = null, brandInfo = true) => {
   const [data, setData] = useState([]);
