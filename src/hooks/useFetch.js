@@ -4,30 +4,30 @@ import { urlForBrands } from "../api-config/apiHandler";
 import API_KEY from "../api-config/apikey";
 const useFetch = (url, params = null, brandInfo = true) => {
   const [data, setData] = useState([]);
-  const [brands, setBrands] = useState([]);
-  useEffect(() => {
-    const getBrands = async () => {
-      const options = {
-        method: "GET",
-        headers: {
-          "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
-          "x-rapidapi-key": API_KEY,
-        },
-      };
-      if (brandInfo) {
-        const response = await fetch(urlForBrands, options);
-        const brandList = await response.json();
-        console.log(brandList);
-        setBrands(brandList);
-      }
-    };
-    const timer = setTimeout(() => {
-      getBrands();
-    }, 1001);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [brandInfo]);
+  // const [brands, setBrands] = useState([]);
+  // useEffect(() => {
+  //   const getBrands = async () => {
+  //     const options = {
+  //       method: "GET",
+  //       headers: {
+  //         "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
+  //         "x-rapidapi-key": API_KEY,
+  //       },
+  //     };
+  //     if (brandInfo) {
+  //       const response = await fetch(urlForBrands, options);
+  //       const brandList = await response.json();
+  //       console.log(brandList);
+  //       setBrands(brandList);
+  //     }
+  //   };
+  //   const timer = setTimeout(() => {
+  //     getBrands();
+  //   }, 1001);
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, [brandInfo]);
   useEffect(() => {
     const fetchData = async () => {
       let fetchUrl = url;
@@ -55,7 +55,7 @@ const useFetch = (url, params = null, brandInfo = true) => {
     };
   }, [url, params]);
 
-  return [data, brands];
+  return [data];
 };
 
 export default useFetch;

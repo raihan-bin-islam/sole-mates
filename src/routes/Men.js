@@ -7,7 +7,7 @@ const Men = () => {
   return (
     <>
       <Navbar bg="crimson" position="relative" />
-      {/* <Products heading={heading} category="men" /> */}
+      <Products heading={heading} category="men" />
       <Footer />
     </>
   );
