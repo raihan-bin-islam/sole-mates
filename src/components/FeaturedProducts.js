@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Products from "./Products";
 
 const FeaturedProducts = () => {
   const heading = "Featured Products";
-  const [page, setPage] = useState(1);
 
   return (
     <>
