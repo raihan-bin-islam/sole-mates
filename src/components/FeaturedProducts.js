@@ -6,7 +6,7 @@ const FeaturedProducts = () => {
 
   return (
     <>
-      <Products heading={heading} year={2020} page={page} numberOfProducts={3} />
+      <Products heading={heading} year={2020} numberOfProducts={3} />
     </>
   );
 };

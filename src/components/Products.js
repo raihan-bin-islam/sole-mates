@@ -3,7 +3,14 @@ import { urlForAllSneakers, urlForBrands } from "../api-config/apiHandler";
 import useFetch from "../hooks/useFetch";
 import ProductCard from "./ProductCard";
 const Products = (props) => {
-  const { limit = 20, page, gender, releaseYear = 2020, numberOfProducts = 15, heading } = props;
+  const {
+    limit = 20,
+    page = 1,
+    gender,
+    releaseYear = 2020,
+    numberOfProducts = 15,
+    heading,
+  } = props;
   // api parameters state values
   // const [limit, setLimit] = useState(20);
   // const [gender, setGender] = useState(category);
