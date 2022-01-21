@@ -9,7 +9,7 @@ const Categories = () => {
         {categoryList.map(({ id, category, thumbnail }) => {
           return (
             <div className="category-card" key={id}>
-              <Link to={"category/" + category}>
+              <Link to={category}>
                 <h2>{category.toUpperCase()}</h2>
                 <img src={thumbnail} alt="" />
               </Link>
