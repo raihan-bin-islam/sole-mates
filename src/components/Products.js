@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { urlForAllSneakers, urlForBrands } from "../api-config/apiHandler";
+import { urlForAllSneakers } from "../api-config/apiHandler";
 import useFetch from "../hooks/useFetch";
 import ProductCard from "./ProductCard";
 const Products = (props) => {
